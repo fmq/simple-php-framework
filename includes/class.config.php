@@ -92,14 +92,14 @@
 
             define('WEB_ROOT', '/');
 
-            $this->dbReadHost      = 'localhost';
-            $this->dbWriteHost     = 'localhost';
-            $this->dbName          = '';
-            $this->dbReadUsername  = '';
-            $this->dbWriteUsername = '';
-            $this->dbReadPassword  = '';
-            $this->dbWritePassword = '';
-            $this->dbOnError       = '';
+            $this->dbReadHost      = getenv('OPENSHIFT_MYSQL_DB_HOST');
+            $this->dbWriteHost     = getenv('OPENSHIFT_MYSQL_DB_HOST');
+            $this->dbName          = getenv('OPENSHIFT_APP_NAME');
+            $this->dbReadUsername  = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+            $this->dbWriteUsername = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+            $this->dbReadPassword  = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+            $this->dbWritePassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+            $this->dbOnError       = getenv('OPENSHIFT_MYSQL_DB_HOST');
             $this->dbEmailOnError  = false;
         }
 
@@ -111,13 +111,13 @@
 
             define('WEB_ROOT', '');
 
-            $this->dbReadHost      = 'localhost';
-            $this->dbWriteHost     = 'localhost';
-            $this->dbName          = '';
-            $this->dbReadUsername  = '';
-            $this->dbWriteUsername = '';
-            $this->dbReadPassword  = '';
-            $this->dbWritePassword = '';
+            $this->dbReadHost      = getenv('OPENSHIFT_MYSQL_DB_HOST');
+            $this->dbWriteHost     = getenv('OPENSHIFT_MYSQL_DB_HOST');
+            $this->dbName          = getenv('OPENSHIFT_APP_NAME');
+            $this->dbReadUsername  = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+            $this->dbWriteUsername = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+            $this->dbReadPassword  = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+            $this->dbWritePassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
             $this->dbOnError       = 'die';
             $this->dbEmailOnError  = false;
         }
