@@ -1,0 +1,3 @@
+[submodule "js/angular.js"]
+	path = js/angular.js
+	url = https://github.com/angular/angular.js.git
